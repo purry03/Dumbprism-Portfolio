@@ -1,0 +1,45 @@
+
+<style>
+    #marquee {
+      display: flex;
+      gap: 1rem; 
+      animation: marquee-animation 15s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    
+    #marquee img {
+      height: 30px; /* adjust the size of icons */
+      object-fit: contain;
+    }
+    
+    @keyframes marquee-animation {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    </style>
+    
+    <div id="marquee" class="flex gap-2 flex-nowrap"> 
+    
+        <img src="/icons/tech-stacks/Javascript.svg" alt="javascript">
+        <img src="/icons/tech-stacks/nodejs.svg" alt="node js">
+        <img src="/icons/tech-stacks/postgresql.svg" alt="postgre sql">
+        <img src="/icons/tech-stacks/Python.svg" alt="python">
+        <img src="/icons/tech-stacks/tailwindcss.svg" alt="tailwind css">
+        <img src="/icons/tech-stacks/androidstudio.svg" alt="android studio">
+        <img src="/icons/tech-stacks/blender.svg" alt="blender">
+        <img src="/icons/tech-stacks/figma.svg" alt="figma">
+        <img src="/icons/tech-stacks/premierepro.svg" alt="premiere pro">
+       
+    
+    
+    
+     </div>
+    
+     <script type="module" src="/src/scripts/marquee.ts"></script>
+    

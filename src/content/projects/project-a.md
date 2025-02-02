@@ -1,7 +1,7 @@
 ---
-name: 'Project A'
-description: 'This is an example project description! You should replace this with a description of your own project.'
-tags: ['Framework A', 'Library B', 'Tool C', 'Resource D']
-image: '../../../public/static/1200x630.png'
-link: 'https://example.com'
+name: 'Tremis'
+description: 'An in memory database similar to redis for faster retrieval of data which is open-source and functions as a GUI in python'
+tags: ['GoLang','Python']
+image: '../../../public/project-logos/tremis-logo.svg'
+link: 'https://github.com/dumbprism/Tremis.git'
 ---

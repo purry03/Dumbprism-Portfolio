@@ -1,10 +1,10 @@
 ---
-name: 'enscribe'
+name: 'dumbprism'
 pronouns: 'he/him'
-avatar: 'https://gravatar.com/avatar/9bfdc4ec972793cf05cb91efce5f4aaaec2a0da1bf4ec34dad0913f1d845faf6.webp?size=256'
-bio: 'd(-_-)b'
-website: 'https://enscribe.dev'
-twitter: 'https://twitter.com/enscry'
-github: 'https://github.com/jktrn'
-mail: 'jason@enscribe.dev'
+avatar: 'https://gravatar.com/avatar/581dd25a140e4d0a2130f2a91ec7c5c6?size=256'
+bio: 'stay dumb stay unique'
+website: 'https://dumbprism.me'
+twitter: 'https://twitter.com/dumbprism'
+github: 'https://github.com/dumbprism'
+mail: 'arhantk915@gmail.com'
 ---

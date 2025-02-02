@@ -1,7 +1,7 @@
 ---
-name: 'Project B'
-description: 'This is an example project description! You should replace this with a description of your own project.'
-tags: ['Framework A', 'Library B', 'Tool C', 'Resource D']
-image: '../../../public/static/1200x630.png'
-link: 'https://example.com'
+name: 'Productivito'
+description: 'An android app that aims on the producivity of an individual by providing all the necessary productivity applications such as Pomodoro Timer, Task Scheduler, To do List, Weekly Goals Tracker'
+tags: ['Android Studio', 'Java']
+image: '../../../public/project-logos/productivito-logo.svg'
+link: 'https://github.com/dumbprism/Productivito.git'
 ---

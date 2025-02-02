@@ -9,6 +9,10 @@ const config: Config = {
       fontFamily: {
         sans: ['Geist', ...defaultTheme.fontFamily.sans],
         mono: ['Geist Mono', ...defaultTheme.fontFamily.mono],
+        offbit: ['/fonts/Offbit-101.woff2','sans'],
+        offbitBold : ['/fonts/Offibt-101Bold.woff2','sans'],
+        stopwatch : ['/fonts/Stopwatch.woff2','sans']
+        
       },
       colors: {
         background: 'hsl(var(--background))',
