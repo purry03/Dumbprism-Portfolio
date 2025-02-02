@@ -19,7 +19,7 @@ export const SITE: Site = {
   EMAIL: 'arhantk915@gmail.com',
   NUM_POSTS_ON_HOMEPAGE: 2,
   POSTS_PER_PAGE: 3,
-  SITEURL: 'https://astro-erudite.vercel.app',
+  SITEURL: 'https://portfolio-alpha-jade-86.vercel.app/',
 }
 
 export const NAV_LINKS: Link[] = [
