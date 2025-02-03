@@ -19,12 +19,17 @@ const blog = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
+
 ---
+
 
 <Layout title="Home" description={SITE.DESCRIPTION}>
   <Container class="flex flex-col gap-y-6">
+   
     <Bento />
+    
     
 
   </Container>
 </Layout>
+
