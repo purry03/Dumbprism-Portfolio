@@ -9,22 +9,17 @@ import SocialIcons from './SocialIcons.astro'
 <footer class="py-4">
   <Container>
     <div
-      class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:justify-between"
+      class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:justify-between bg-[#0A0A0A] rounded-xl p-2 border border-1 border-[#E49245]/30 font-[offbit]"
     >
-      <div class="flex items-center gap-x-2">
-        <span class="text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} All rights reserved.
+
+      <div class="flex items-center gap-x-2 ">
+        <span class="text-center text-sm   lowercase">
+          &copy; {new Date().getFullYear()} All rights reserved
         </span>
-        <Separator orientation="vertical" className="h-4" />
-        <p class="text-center text-sm text-muted-foreground">
-          Made with 🤍 by <Link
-            href="https://github.com/dumbprism"
-            class="text-foreground"
-            external
-            underline>Dumbprism</Link
-          >!
-        </p>
-      </div>
+       </div>
+       <p class="lowercase">
+          visit again for updates
+       </p>
       <SocialIcons links={SOCIAL_LINKS} />
     </div>
   </Container>
