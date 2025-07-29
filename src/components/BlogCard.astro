@@ -22,7 +22,7 @@ const authors = await parseAuthors(entry.data.authors ?? [])
 ---
 
 <div
-  class="not-prose rounded-xl  p-4 transition-colors duration-300 ease-in-out "
+  class="not-prose rounded-xl  p-4 transition-colors duration-300 ease-in-out border"
 >
   <Link
     href={`/${entry.collection}/${entry.id}`}
@@ -51,25 +51,6 @@ const authors = await parseAuthors(entry.data.authors ?? [])
       <div
         class="mb-2 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground"
       >
-        {
-          authors.length > 0 && (
-            <>
-              {authors.map((author) => (
-                <div class="flex items-center gap-x-1.5">
-                  <AvatarComponent
-                    client:load
-                    src={author.avatar}
-                    alt={author.name}
-                    fallback={author.name[0]}
-                    className="size-5 rounded-full"
-                  />
-                  <span>{author.name}</span>
-                </div>
-              ))}
-              <Separator orientation="vertical" className="h-4" />
-            </>
-          )
-        }
         <span>{formattedDate}</span>
         <Separator orientation="vertical" className="h-4" />
         <span>{readTime}</span>
@@ -78,7 +59,7 @@ const authors = await parseAuthors(entry.data.authors ?? [])
         entry.data.tags && (
           <div class="flex flex-wrap gap-2">
             {entry.data.tags.map((tag) => (
-              <Badge variant="secondary">{tag}</Badge>
+              <Badge variant="secondary" className="rounded-sm">{tag}</Badge>
             ))}
           </div>
         )

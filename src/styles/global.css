@@ -11,20 +11,13 @@
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMonoVF.woff2') format('woff2');
+  font-family: 'jetbrains';
+  src: url('/fonts/JetBrainsMono.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
-@font-face{
-  font-family: 'offbit';
-  src: url('/fonts/OffBit-101.woff2') format('woff2');
-}
-@font-face{
-  font-family: 'offbit-bold';
-  src: url('/fonts/Offbit-101Bold.woff2') format('woff2');
-}
+
 @font-face{
   font-family: 'stopwatch';
   src: url('/fonts/Stopwatch.woff2') format('woff2');

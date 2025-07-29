@@ -1,8 +1,8 @@
 import * as dotenv from "dotenv"
 dotenv.config()
 
-const GITHUB_USERNAME = "dumbprism";
-const ACCESS_TOKEN = process.env.ACESS_TOKEN;
+const GITHUB_USERNAME = "purry03";
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 const GRAPHQL_ENDPOINT = "https://api.github.com/graphql";
 
 const query = `

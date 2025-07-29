@@ -1,10 +1,5 @@
 ---
-import Marquee from "./Marquee.astro"
-import Github from './Github.astro'
-import Carousel from './Carousel.astro'
-import Music from "./Music.astro"
 
-import BlogCard from '@/components/BlogCard.astro'
 import Container from '@/components/Container.astro'
 import Link from '@/components/Link.astro'
 import { buttonVariants } from '@/components/ui/button'
@@ -27,87 +22,47 @@ const blog = (await getCollection('blog'))
 
 
 
-<div class="grid grid-cols-7 grid-rows-4 md:grid-rows-10 gap-3 max-w-[65rem] mx-auto">
-    <div class="col-span-7 row-auto md:col-span-4 md:row-span-3 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg">
-      <div class="font-[offbit] text-white p-5">
-        <p class="font-bold text-2xl">Hey there,</p>
-        <p class="text-xl opacity-65">
-          I am Arhant. I am currently an undergrad at Amrita Vishwa Vidyapeetham . Developing has been my forte since a long time now and I have developed a keen interest in web and mobile application development. Apart from developing, you can find me making <span><a href="https://www.youtube.com/@arhant_19">films</a></span> , discovering new books and sometimes designing random 3D art and cool graphic designs.
-        </p>
-      </div>
+<div class="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-6 gap-3 max-w-[130rem] mx-auto">
+    <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1 border-[#E49245]/20 border-2 rounded-lg relative overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center filter blur-sm opacity-20" style="background-image: url('/static/image-2.png');"></div>
+      <div class="relative z-10 font-[jetbrains] text-white p-6">
+        <p class="text-sm opacity-75 mb-4 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
+          Hey, I’m Rohan! I’m a computing enthusiast and simulation nerd with a focus on high-performance and quantum systems.
+        <p class="text-sm opacity-75 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
+Beyond my academic work, I spend time building game tools, designing experiments, and exploring the overlap between science fiction, storytelling, and real-world tech.      </div>
     </div>
 
-    <div class="col-start-1 col-span-7 md:col-span-3 md:row-span-3 md:col-start-5 
-    bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden relative">
-
-      <Carousel />
-
-    </div>
-
-
-
-  <div class="col-start-1 col-span-7 md:col-span-2 md:row-span-4 md:row-start-4 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-5">
- 
-
-    <section class="flex flex-col gap-y-4">
-      <h2 class="text-xl font-bold font-[offbit]">Latest posts</h2>
-      <ul class="not-prose flex flex-col gap-y-4">
-        {
-          blog.map((post) => (
-            <li>
-              <BlogCard entry={post} />
-            </li>
-          ))
-        }
-      </ul>
-      <div class="flex justify-center">
-        <Link
-          href="/blog"
-          class={buttonVariants({ variant: 'ghost' }) + ' group'}
-        >
-          See all posts <span
-            class="ml-1.5 transition-transform group-hover:translate-x-1"
-            >&rarr;</span
-          >
-        </Link>
-      </div>
-    </section> 
+  <div class="col-span-full md:col-span-1 md:row-span-6 md:col-start-3 md:row-start-1 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden relative group">
+      <img src="/static/biome.jpg" alt="Japanese castle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out">
+      <a href="#" class="absolute inset-0 flex items-end p-4 text-white bg-black bg-opacity-25 group-hover:bg-opacity-50 transition-colors duration-300 ease-in-out">
+        <div>
+          <p class="font-bold text-lg">Ultrafast Terrain Generation</p>
+          <p class="text-sm">Powered by CUDA</p>
+          <p class="text-xs opacity-40">Ultraschnelle Geländegenerierung</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </a>
   </div>
 
-  <!-- github contributions -->
-  <div class=" col-span-7 col-start-1 md:col-span-3 md:row-span-4 md:col-start-3 md:row-start-4 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg">
-    <Github />
+  <div class="col-span-full md:col-span-1 md:row-span-2 md:col-start-1 md:row-start-3 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-5">
   </div>
 
-  <div class="col-start-1 col-span-7 md:col-span-2 md:row-span-4 md:col-start-6 md:row-start-4 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg font-[stopwatch] text-8xl p-[50px] text-[#E49245]">
-    <p class = "text-center my-[10rem]">
-    FOR HIRE
-  </p>
+  <div class="col-span-full md:col-span-1 md:row-span-2 md:col-start-2 md:row-start-3 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-5">
   </div>
 
-  <!-- music componeny -->
-
-  <div class="col-start-1 col-span-7 md:col-span-2 md:row-span-2 md:row-start-8 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-4 flex items-center space-x-4">
-    <Music />
+  <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-5 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden relative group">
+      <img src="/static/fft.jpg" alt="Japanese castle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out">
+      <a href="#" class="absolute inset-0 flex items-end p-4 text-white bg-black bg-opacity-25 group-hover:bg-opacity-50 transition-colors duration-300 ease-in-out">
+        <div>
+          <p class="font-bold text-lg">Accelerated FFT via SYCL</p>
+          <p class="text-sm">SYCL + CUDA</p>
+          <p class="text-xs opacity-40">Beschleunigte FFT über SYCL</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </a>
+  </div>
 </div>
-
-  <div class="col-span-7 col-start-1 md:col-span-2 md:row-span-2 md:col-start-3 md:row-start-8 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg">
-    
-    <a href="https://github.com/dumbprism">
-      <img src="/icons/Github.svg" alt="github-logo" class="w-40 h-40 md:w-20 md:h-20 mx-auto my-20">
-    </a>
-
-  </div>
-  <!-- tech-stack -->
-  <div class=" col-span-7 col-start-1 md:col-span-3 md:row-span-2 md:col-start-5 md:row-start-8 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden">
-    <div id="tech-stack" class="mb-4">
-          <p class="font-[offbit] text-white p-5 text-2xl">Tool Stack</p>
-          <Marquee />
-        
-    </div>
-  </div>
-
-</div>
-
-<script type="module" src="/src/scripts/carousel.ts"></script>
-<script type="module" src="/src/scripts/music.ts"></script>

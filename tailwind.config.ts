@@ -9,6 +9,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Geist', ...defaultTheme.fontFamily.sans],
         mono: ['Geist Mono', ...defaultTheme.fontFamily.mono],
+        jetbrains: ['/fonts/JetBrainsMono.woff2','sans'],
         offbit: ['/fonts/Offbit-101.woff2','sans'],
         offbitBold : ['/fonts/Offibt-101Bold.woff2','sans'],
         stopwatch : ['/fonts/Stopwatch.woff2','sans']

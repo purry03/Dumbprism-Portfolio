@@ -13,24 +13,23 @@ export type Link = {
 }
 
 export const SITE: Site = {
-  TITLE: 'dumbprism',
+  TITLE: 'rohan-sharma.de',
   DESCRIPTION:
-    'my personal portfolio that showcases all my works and achievements in the form of a minimalistic UI',
-  EMAIL: 'arhantk915@gmail.com',
-  NUM_POSTS_ON_HOMEPAGE: 2,
-  POSTS_PER_PAGE: 3,
-  SITEURL: 'https://portfolio-alpha-jade-86.vercel.app/',
+    'a work in (parallel) progress',
+  EMAIL: 'rohan.sharma@mail.de',
+  NUM_POSTS_ON_HOMEPAGE: 1,
+  POSTS_PER_PAGE: 4,
+  SITEURL: 'https://rohan-sharma.de/',
 }
 
 export const NAV_LINKS: Link[] = [
   { href: '/', label: 'home' },
   { href: '/blog', label: 'blog' },
-  { href: '/about', label: 'works' },
 ]
 
 export const SOCIAL_LINKS: Link[] = [
-  { href: 'https://github.com/dumbprism', label: 'GitHub' },
+  { href: 'https://github.com/purry03', label: 'GitHub' },
   { href: 'https://twitter.com/dumbprism', label: 'Twitter' },
-  { href: 'arhantk915@gmail.com', label: 'Email' },
+  { href: 'rohan.sharma@mail.de', label: 'Email' },
   
 ]
