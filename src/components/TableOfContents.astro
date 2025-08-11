@@ -11,14 +11,26 @@ export interface Heading {
 }
 
 const { headings } = Astro.props
-const toc = buildToc(headings)
+
+// Filter out headings with the omit comment
+const filteredHeadings = headings.filter(
+  (h: any) => !h.text.includes('{/* omit in toc */}'),
+)
+
+// Clean the heading text by removing the comment for TOC display
+function cleanHeadingText(text: string) {
+  return text.replace('{/* omit in toc */}', '').trim()
+}
+
+const toc = buildToc(filteredHeadings)
 
 function buildToc(headings: Heading[]): Heading[] {
   const toc: Heading[] = []
   const stack: Heading[] = []
 
   headings.forEach((h) => {
-    const heading = { ...h, subheadings: [] }
+    // Clean the heading text here for TOC
+    const heading = { ...h, subheadings: [], text: cleanHeadingText(h.text) }
 
     while (stack.length > 0 && stack[stack.length - 1].depth >= heading.depth) {
       stack.pop()
@@ -56,8 +68,11 @@ function buildToc(headings: Heading[]): Heading[] {
     type="always"
   >
     <nav>
-      <ul></ul>
-      {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+      <ul>
+        {toc.map((heading) => (
+          <TableOfContentsHeading heading={heading} />
+        ))}
+      </ul>
     </nav>
   </ScrollArea>
 </details>
@@ -74,7 +89,9 @@ function buildToc(headings: Heading[]): Heading[] {
         <li>
           <h2 class="mb-2 text-lg font-semibold">Table of Contents</h2>
         </li>
-        {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+        {toc.map((heading) => (
+          <TableOfContentsHeading heading={heading} />
+        ))}
       </ul>
     </ScrollArea>
   </div>
@@ -109,6 +126,22 @@ function buildToc(headings: Heading[]): Heading[] {
     const sections = document.querySelectorAll('.prose section')
     sections.forEach((section) => {
       observer.observe(section)
+    })
+
+    // Smooth scrolling for TOC links
+    const tocLinks = document.querySelectorAll('#toc-container li a')
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href')
+        if (!href) return
+        const target = document.querySelector(href)
+        if (!target) return
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - headerHeight,
+          behavior: 'smooth',
+        })
+      })
     })
   }
 

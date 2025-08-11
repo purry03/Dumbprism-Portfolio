@@ -67,6 +67,10 @@
     @apply border-border;
   }
 
+  *{
+    box-sizing: border-box;
+  }
+
   html {
     color-scheme: light;
     @apply bg-background text-foreground;
@@ -146,6 +150,8 @@
       pre {
         @apply static max-h-[600px] overflow-auto rounded-xl border bg-secondary/20 py-4 text-sm leading-loose;
 
+        max-height: none !important;
+        
         /* Code block content */
         > code {
           @apply whitespace-pre-wrap;

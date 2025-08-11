@@ -1,5 +1,4 @@
 ---
-
 import Container from '@/components/Container.astro'
 import Link from '@/components/Link.astro'
 import { buttonVariants } from '@/components/ui/button'
@@ -20,49 +19,79 @@ const blog = (await getCollection('blog'))
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
 ---
 
-
-
 <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-6 gap-3 max-w-[130rem] mx-auto">
-    <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1 border-[#E49245]/20 border-2 rounded-lg relative overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center filter blur-sm opacity-20" style="background-image: url('/static/image-2.png');"></div>
-      <div class="relative z-10 font-[jetbrains] text-white p-6">
-        <p class="text-sm opacity-75 mb-4 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
-          Hey, I’m Rohan! I’m a computing enthusiast and simulation nerd with a focus on high-performance and quantum systems.
-        <p class="text-sm opacity-75 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
-Beyond my academic work, I spend time building game tools, designing experiments, and exploring the overlap between science fiction, storytelling, and real-world tech.      </div>
+  <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1 border-[#E49245]/20 border-2 rounded-lg relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center filter blur-sm opacity-20" style="background-image: url('/static/image-2.png');"></div>
+    <div class="relative z-1 font-[jetbrains] text-white p-6">
+      <p class="text-sm opacity-75 mb-4 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
+        Hey, I’m Rohan! I’m a computing enthusiast and simulation nerd with a focus on high-performance and quantum systems.
+      </p>
+      <p class="text-sm opacity-75 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
+        Beyond my academic work, I spend time building game tools, designing experiments, and exploring the overlap between science fiction, storytelling, and real-world tech.
+      </p>
     </div>
+  </div>
 
   <div class="col-span-full md:col-span-1 md:row-span-6 md:col-start-3 md:row-start-1 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden relative group">
-      <img src="/static/biome.jpg" alt="Japanese castle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out">
-      <a href="#" class="absolute inset-0 flex items-end p-4 text-white bg-black bg-opacity-25 group-hover:bg-opacity-50 transition-colors duration-300 ease-in-out">
-        <div>
-          <p class="font-bold text-lg">Ultrafast Terrain Generation</p>
-          <p class="text-sm">Powered by CUDA</p>
-          <p class="text-xs opacity-40">Ultraschnelle Geländegenerierung</p>
+    <img src="/images/home/biome.jpg" alt="Japanese castle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out">
+    <a href="/blog/cubiomesmpi-part1" class="absolute inset-0 flex items-end p-4 text-white bg-black bg-opacity-25 group-hover:bg-opacity-50 transition-colors duration-300 ease-in-out">
+      <div>
+        <p class="font-bold text-lg">Ultrafast Biome Generation</p>
+        <p class="text-sm">Powered by MPI</p>
+        <p class="text-xs opacity-40">a cubiomes port</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-3 bg-gradient-to-br from-[#18191A] to-[#232526] border-[#E49245]/20 border-2 rounded-xl overflow-hidden relative group shadow-lg flex items-center justify-center">
+    <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500 ease-in-out" style="background-image: url('/images/home/sakura.jpg');"></div>
+    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors duration-300"></div>
+    <a href="https://gitlab.com/sharmarohan" target="_blank" rel="noopener noreferrer" class="relative z-10 flex flex-col items-center justify-center p-10 text-white group">
+      <div class="mb-4">
+        <div class="w-20 h-20 rounded-full border-4 border-[#FC6D26] bg-white/10 flex items-center justify-center shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" class="w-12 h-12 text-[#FC6D26]">
+            <path d="M35.49 21.43l-3.18-9.8a1.38 1.38 0 0 0-2.62-.06l-2.2 6.77H8.51l-2.2-6.77a1.38 1.38 0 0 0-2.62.06l-3.18 9.8a1.37 1.37 0 0 0 .5 1.54l16.18 11.8a1.37 1.37 0 0 0 1.62 0l16.18-11.8a1.37 1.37 0 0 0 .5-1.54z"/>
+          </svg>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-        </svg>
-      </a>
+      </div>
+      <span class="font-bold text-2xl tracking-wide font-[JetBrains Mono,monospace] text-[#FC6D26] select-text drop-shadow">sharmarohan</span>
+      <span class="mt-1 text-sm text-white/70 font-mono tracking-wider">@gitlab</span>
+      <span class="mt-4 text-xs text-white/40 font-mono text-center max-w-xs">Open source projects, experiments, and more on my GitLab profile.</span>
+    </a>
   </div>
 
-  <div class="col-span-full md:col-span-1 md:row-span-2 md:col-start-1 md:row-start-3 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-5">
+  <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-5 bg-[#18191A] border-[#E49245]/20 border-2 rounded-xl p-6 relative overflow-hidden flex flex-col items-center justify-center">
+    <div class="absolute inset-0 bg-cover bg-center filter blur-xs opacity-75" style="background-image: url('/images/home/japan.jpg');"></div>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center text-white drop-shadow-md">
+      <h3 class="font-bold text-2xl mb-2 tracking-wide text-[#E49245]">Let’s Connect!</h3>
+      <div class="flex flex-col gap-3 items-center">
+        <a href="mailto:rohan.sharma@mail.de" class="flex items-center gap-2 hover:text-[#E49245] transition-colors duration-200" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12l-4-4-4 4m8 0l-4 4-4-4" /></svg>
+          <span class="font-mono text-sm text-white drop-shadow">rohan.sharma@mail.de</span>
+        </a>
+        <a href="https://www.linkedin.com/in/roh9n" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#E49245] transition-colors duration-200" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+          <span class="font-mono text-sm text-white drop-shadow">Rohan Sharma</span>
+        </a>
+        <a href="https://gitlab.com/sharmarohan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#E49245] transition-colors duration-200" aria-label="GitLab">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor" class="w-6 h-6"><path d="M35.49 21.43l-3.18-9.8a1.38 1.38 0 0 0-2.62-.06l-2.2 6.77H8.51l-2.2-6.77a1.38 1.38 0 0 0-2.62.06l-3.18 9.8a1.37 1.37 0 0 0 .5 1.54l16.18 11.8a1.37 1.37 0 0 0 1.62 0l16.18-11.8a1.37 1.37 0 0 0 .5-1.54z"/></svg>
+          <span class="font-mono text-sm text-white drop-shadow">sharmarohan</span>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <div class="col-span-full md:col-span-1 md:row-span-2 md:col-start-2 md:row-start-3 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg p-5">
-  </div>
+<script>
+  import hackerText from "../scripts/hackerText.ts";
 
-  <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-5 bg-[#131313] border-[#E49245]/20 border-2 rounded-lg overflow-hidden relative group">
-      <img src="/static/fft.jpg" alt="Japanese castle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out">
-      <a href="#" class="absolute inset-0 flex items-end p-4 text-white bg-black bg-opacity-25 group-hover:bg-opacity-50 transition-colors duration-300 ease-in-out">
-        <div>
-          <p class="font-bold text-lg">Accelerated FFT via SYCL</p>
-          <p class="text-sm">SYCL + CUDA</p>
-          <p class="text-xs opacity-40">Beschleunigte FFT über SYCL</p>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-        </svg>
-      </a>
-  </div>
-</div>
+  document.addEventListener("DOMContentLoaded", () => {
+    const element = document.getElementById("hacker-text");
+    if (element) {
+      hackerText(element);
+    }
+  });
+</script>

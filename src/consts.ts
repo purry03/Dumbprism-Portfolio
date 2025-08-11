@@ -28,8 +28,8 @@ export const NAV_LINKS: Link[] = [
 ]
 
 export const SOCIAL_LINKS: Link[] = [
-  { href: 'https://github.com/purry03', label: 'GitHub' },
-  { href: 'https://twitter.com/dumbprism', label: 'Twitter' },
+  { href: 'https://gitlab.com/sharmarohan', label: 'Gitlab' },
+  { href: 'https://www.linkedin.com/in/roh9n', label: 'LinkedIn' },
   { href: 'rohan.sharma@mail.de', label: 'Email' },
   
 ]
