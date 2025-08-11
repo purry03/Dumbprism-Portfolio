@@ -21,12 +21,13 @@ const blog = (await getCollection('blog'))
 
 <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-6 gap-3 max-w-[130rem] mx-auto">
   <div class="col-span-full md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1 border-[#E49245]/20 border-2 rounded-lg relative overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center filter blur-sm opacity-20" style="background-image: url('/static/image-2.png');"></div>
-    <div class="relative z-1 font-[jetbrains] text-white p-6">
-      <p class="text-sm opacity-75 mb-4 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
-        Hey, I’m Rohan! I’m a computing enthusiast and simulation nerd with a focus on high-performance and quantum systems.
+    <div class="absolute inset-0 bg-cover bg-center filter blur-xs opacity-20" style="background-image: url('/images/home/contour.avif');"></div>
+    <div class="relative font-[jetbrains] text-white p-4 md:p-8 flex flex-col justify-around h-full">
+      <h2 class="text-3xl font-bold mb-4 text-[#E49245]">Hello!</h2>
+      <p class="text-sm opacity-75 mb-4 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10 shadow-md">
+        I’m Rohan! I’m a computing enthusiast and simulation nerd with a focus on high-performance and quantum systems.
       </p>
-      <p class="text-sm opacity-75 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10">
+      <p class="text-sm opacity-75 bg-[#1A1A1A] p-3 rounded-md border border-[#E49245]/10 shadow-md">
         Beyond my academic work, I spend time building game tools, designing experiments, and exploring the overlap between science fiction, storytelling, and real-world tech.
       </p>
     </div>
